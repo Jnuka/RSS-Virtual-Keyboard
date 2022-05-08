@@ -1,0 +1,24 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;   
+  scroll-behavior: smooth; 
+}
+
+body {
+  background-color: $color-background;
+  font-family: 'Steamy';
+  color: $color-text;
+  @include color-selection($color: $color-selection);
+}
+
+.wrapper {
+  margin: auto;
+  max-width: 1200px;
+  padding: 10px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
