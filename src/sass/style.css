@@ -1,0 +1,314 @@
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+body {
+  line-height: 1;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+nav ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+/* change colours to suit your needs */
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none;
+}
+
+/* change colours to suit your needs */
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* change border colour to suit your needs */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #cccccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+input, select {
+  vertical-align: middle;
+}
+
+@font-face {
+  font-family: 'Steamy';
+  src: url("../fonts/Steamy.woff2") format("woff2"), url("../fonts/Steamy.woff") format("woff");
+}
+
+.keyboard__button {
+  -webkit-transition: all .1s ease-out;
+  transition: all .1s ease-out;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #f6f4c9;
+  font-family: 'Steamy';
+  color: #000000;
+}
+
+body *::-moz-selection {
+  background: rgba(23, 68, 95, 0.5);
+}
+
+body *::selection {
+  background: rgba(23, 68, 95, 0.5);
+}
+
+.wrapper {
+  margin: auto;
+  max-width: 1200px;
+  padding: 10px 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.keyboard {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.keyboard__title {
+  margin-bottom: 15px;
+  font-size: 4rem;
+  line-height: 4rem;
+  font-weight: 700;
+  font-style: normal;
+  letter-spacing: 1rem;
+}
+
+.keyboard__text {
+  font-size: 3rem;
+  line-height: 4rem;
+  font-weight: 300;
+  font-style: normal;
+  margin-bottom: 45px;
+  max-width: 650px;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.keyboard__textarea {
+  resize: none;
+  width: 100%;
+  height: 190px;
+  padding: 10px;
+  border: 3px solid #17445f;
+  border-radius: 10px 0 0 10px;
+  margin-bottom: 30px;
+  font-family: 'Steamy';
+  outline: none;
+  overflow: auto;
+  font-size: 5rem;
+  line-height: 5.2rem;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.keyboard__textarea::-webkit-scrollbar {
+  width: 5px;
+}
+
+.keyboard__textarea::-webkit-scrollbar-track {
+  background-color: #17445f;
+}
+
+.keyboard__textarea::-webkit-scrollbar-thumb {
+  background-color: #cce6cb;
+}
+
+.keyboard__buttons {
+  display: -ms-grid;
+  display: grid;
+  gap: 10px;
+  background-color: #17445f;
+  padding: 10px;
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 24px 30px rgba(0, 0, 0, 0.7);
+          box-shadow: 0px 24px 30px rgba(0, 0, 0, 0.7);
+}
+
+.keyboard__buttons-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 5px;
+}
+
+.keyboard__button {
+  font-family: 'Steamy';
+  font-size: 3rem;
+  line-height: 3.2rem;
+  font-weight: 400;
+  font-style: normal;
+  height: 53px;
+  width: 50px;
+  height: 68px;
+  width: 65px;
+  border-radius: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  background-color: #cce6cb;
+  -webkit-box-shadow: 0px 3px 3px rgba(133, 138, 118, 0.8);
+          box-shadow: 0px 3px 3px rgba(133, 138, 118, 0.8);
+  cursor: pointer;
+}
+
+.keyboard__button:hover {
+  background-color: #82beb6;
+}
+
+.backspace,
+.enter,
+.shift,
+.capslock,
+.tab,
+.ctrl,
+.win,
+.alt,
+.del,
+.arow {
+  background-color: #88c586;
+}
+
+.backspace,
+.capslock {
+  width: 100px;
+  font-size: 1.8rem;
+  line-height: 3.2rem;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.capslock {
+  font-size: 2rem;
+  line-height: 3.2rem;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.enter {
+  width: 125px;
+}
+
+.shift {
+  width: 137px;
+}
+
+.tab,
+.ctrl,
+.win,
+.alt {
+  width: 70px;
+}
+
+.space {
+  width: 466px;
+}
+
+.space:active {
+  -webkit-transform: scale(0.99);
+          transform: scale(0.99);
+}
+
+.active {
+  background-color: #82beb6;
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
+}
+/*# sourceMappingURL=style.css.map */

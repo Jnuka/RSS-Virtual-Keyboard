@@ -1,0 +1,132 @@
+.keyboard {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.keyboard__title {
+  margin-bottom: 15px;
+  @include font($size: 4rem, $height: 4rem, $weight: 700);
+  letter-spacing: 1rem;
+}
+
+.keyboard__text {
+  @include font($size: 3rem, $height: 4rem, $weight: 300);
+  margin-bottom: 45px;
+  max-width: 650px;
+  text-align: center;
+  color: $color-sub-title;
+}
+
+.keyboard__textarea {
+  resize: none;
+  width: 100%;
+  height: 190px;
+  padding: 10px;
+  border: 3px solid $color-border;
+  border-radius: 10px 0 0 10px;
+  margin-bottom: 30px;  
+  font-family: 'Steamy';
+
+  outline: none;
+  overflow: auto;
+  @include font($size: 5rem, $height: 5.2rem);
+}
+
+.keyboard__textarea::-webkit-scrollbar {
+  width: 5px;
+}
+
+.keyboard__textarea::-webkit-scrollbar-track {
+  background-color: $color-border;
+}
+
+.keyboard__textarea::-webkit-scrollbar-thumb {
+  background-color: $color-background-button;
+}
+
+.keyboard__buttons {
+  display: grid;
+  gap: 10px;
+  background-color: $color-border;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0px 24px 30px $color-sub-title;
+}
+
+.keyboard__buttons-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 5px;
+}
+
+.keyboard__button {
+  font-family: 'Steamy';
+  @include font($size: 3rem, $height: 3.2rem);
+  height: 53px;
+  width: 50px;
+  height: 68px;
+  width: 65px;
+  border-radius: 10px;
+  border: 1px solid $color-border-button;
+  background-color: $color-background-button;
+  box-shadow: $color-box-shadow;
+  cursor: pointer;
+  @extend %transition;
+  
+  &:hover {
+    background-color: $color-background-active;
+  }
+}
+
+.backspace,
+.enter,
+.shift,
+.capslock, 
+.tab,
+.ctrl,
+.win,
+.alt,
+.del,
+.arow {
+  background-color: darken($color-background-button, 20%);
+}
+
+.backspace,
+.capslock  {
+  width: 100px;
+  @include font($size: 1.8rem, $height: 3.2rem);
+}
+
+.capslock {
+  @include font($size: 2rem, $height: 3.2rem);
+}
+
+.enter{
+  width: 125px;
+}
+
+.shift {
+  width: 137px;
+}
+
+.tab,
+.ctrl,
+.win,
+.alt  {
+  width: 70px;
+}
+
+.space {
+  width: 466px;
+  &:active {
+    transform: scale(0.99);
+  }
+}
+
+.active {
+  background-color: $color-background-active;
+  transform: scale(0.95);
+}

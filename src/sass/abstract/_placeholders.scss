@@ -1,0 +1,9 @@
+@font-face {
+  font-family: 'Steamy';
+  src: url('../fonts/Steamy.woff2') format('woff2'),
+	url('../fonts/Steamy.woff') format('woff');
+}
+
+%transition {
+  transition: all .1s ease-out;
+}
